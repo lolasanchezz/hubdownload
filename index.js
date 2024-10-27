@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 
-const puppeteer = require('puppeteer-extra');
-const {setTimeout}  = require ("node:timers/promises");
+import { launch } from 'puppeteer-extra';
+import { setTimeout } from "node:timers/promises";
 
 
 
-const path = require('path');
 
 
 
@@ -25,7 +24,7 @@ async function why () {
 
 
 
-  const browser = await puppeteer.launch({
+  const browser = await launch({
     headless: false 
   });
    const context = await browser.createBrowserContext({incognito: true});

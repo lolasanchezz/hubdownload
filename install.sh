@@ -4,7 +4,6 @@ echo 'Enter your email:'
 read -r email
 echo 'Enter your password 😊'
 read -r password
-
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 # Load nvm and install node
@@ -47,3 +46,11 @@ EOF
 
 # Load the Launch Agent
 launchctl load ~/Library/LaunchAgents/com.lolas.getassignments.plist
+
+
+cd
+cd
+cd Applications
+curl -LO https://github.com/lolasanchezz/hubdownload/releases/download/v0.1/hub.zip
+unzip "hub.zip"
+rm -rf hub.zip
