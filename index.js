@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 
 const puppeteer = require('puppeteer-extra');
 const {setTimeout}  = require ("node:timers/promises");
