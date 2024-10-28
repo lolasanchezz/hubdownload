@@ -1,13 +1,15 @@
 #!/bin/bash
 USER=$(whoami)
 echo 'Enter your email:'
-read -r email
-echo 'Enter your password 😊'
-read -r password
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-# Load nvm and install node
-source "$NVM_DIR/nvm.sh"
+read  email
+echo "Enter your password 😊 {your input won't show for security purposes!!}"
+read -s password
+
+
+curl -o install_nvm.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh
+bash install_nvm.sh
+rm install_nvm.sh
+
 nvm install 20
 
 if ! node -v > /dev/null 2>&1; then
@@ -48,9 +50,4 @@ EOF
 launchctl load ~/Library/LaunchAgents/com.lolas.getassignments.plist
 
 
-cd
-cd
-cd Applications
-curl -LO https://github.com/lolasanchezz/hubdownload/releases/download/v0.1/hub.zip
-unzip "hub.zip"
-rm -rf hub.zip
+
